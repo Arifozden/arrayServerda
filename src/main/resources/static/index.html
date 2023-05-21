@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Musteri Kayit</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="index.js"></script>
+    <meta charset="UTF-8">
+    <title>Musteri Kayit</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="index.js"></script>
 </head>
 <body>
-<h1>Musteri</h1>
-Isim : <input type="text" id="isim"><br>
-Adres : <input type="text" id="adres"><br>
-<button onclick="musteriKayit()">Kaydet</button>
-<br>
-Tum musteriler:
-<div id="musteriler"></div>
-<button onclick="hepsiniSil()">Kayitlari Sil</button>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Musteri</h1>
+            <form class="form">
+                <div class="form-group">
+                    <label for="isim">Isim</label>
+                    <input type="text" id="isim"></div>
+                <div class="form-group">
+                    <label for="adres">Adres</label> <input type="text" id="adres"></div>
+            </form>
+            <button class="btn btn-primary" onclick="musteriKayit()">Kaydet</button>
+        </div>
+        <br>
+        <div class="col-md-8">
+            Tum musteriler:
+            <div id="musteriler" class="table-responsive"></div>
+            <button class="btn btn-danger" onclick="hepsiniSil()">Kayitlari Sil</button>
+        </div>
+    </div>
+</div>
 </body>
 </html>
