@@ -20,4 +20,10 @@ public class MusteriController {
     public List<Musteri> hepsiniGetir(){
         return tumMusteriler;
     }
+
+    @GetMapping("/hepsiniSil")
+    public void hepsiniSil(){
+        tumMusteriler.clear();
+    }
+
 }

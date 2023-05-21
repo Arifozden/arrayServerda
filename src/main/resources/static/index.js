@@ -24,3 +24,9 @@ function bilgiDuzenle(musteriler){
     yaz+="</table>";
     $("#musteriler").html(yaz);
 }
+
+function hepsiniSil(){
+    $.get("/hepsiniSil",function (){
+        hepsiniGetir();
+    });
+}
