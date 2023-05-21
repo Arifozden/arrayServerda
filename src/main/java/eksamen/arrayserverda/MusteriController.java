@@ -11,7 +11,7 @@ import java.util.List;
 public class MusteriController {
     private final List<Musteri> tumMusteriler=new ArrayList<>();
 
-    @PostMapping("/kayit")
+    @PostMapping("/musteriKayit")
     public void kayit(Musteri girMusteri){
         tumMusteriler.add(girMusteri);
     }
@@ -21,9 +21,17 @@ public class MusteriController {
         return tumMusteriler;
     }
 
+    @GetMapping("arabalariGetir")
+    public List<Araba>arabalariGetir(){
+        List<Araba>arabaListesi=new ArrayList<>();
+        arabaListesi.add(new Araba("Audi","A4"));
+        arabaListesi.add(new Araba("Volvo","V90"));
+        arabaListesi.add(new Araba("Audi","A8"));
+
+        return arabaListesi;
+    }
     @GetMapping("/hepsiniSil")
     public void hepsiniSil(){
         tumMusteriler.clear();
     }
-
 }

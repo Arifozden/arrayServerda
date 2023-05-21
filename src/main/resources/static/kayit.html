@@ -14,26 +14,48 @@
             <a class="navbar-brand" href="index.html">Musteri Kayit Otomasyonu</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="index.html">Ana Sayfa</a> </li>
-            <li  class="active"><a href="kayit.html">Kayit</a> </li>
-            <li><a href="liste.html">Liste</a> </li>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li class="active"><a href="kayit.html">Kayit</a></li>
+            <li><a href="liste.html">Liste</a></li>
         </ul>
     </div>
 </nav>
 
 <div class="container">
-
-
-            <h1>Musteri</h1>
-            <form class="form">
-                <div class="form-group">
-                    <label for="isim">Isim</label>
-                    <input type="text" id="isim"></div>
-                <div class="form-group">
-                    <label for="adres">Adres</label> <input type="text" id="adres"></div>
-            </form>
-            <button class="btn btn-primary" onclick="musteriKayit()">Kaydet</button>
+    <h1>Musteri</h1>
+    <form class="form">
+        <div class="form-group">
+            <label for="isim">Isim</label>
+            <input type="text" id="isim"></div>
+        <div class="form-group">
+            <label for="adres">Adres</label> <input type="text" id="adres"></div>
+        <div class="form-group">
+            Ehliyet?
+            <input type="checkbox" name="ehliyet">
         </div>
+        <div class="form-group">
+            Eski Araba : Tofas
+            <input type="radio" value="tofas" name="seciliMarka">
+        </div>
+        <div class="form-group">
+            Eski Araba : Renault
+            <input type="radio" value="renault" name="seciliMarka">
+        </div>
+        <div class="form-group">
+            <label>Yeni Araba</label>
+            <div id="arabalar"></div>
+        </div>
+        <div class="form-group">
+            <label>Yakit turu</label>
+            <div id="yakit"></div>
+        </div>
+        <br>
+        <div class="form-group">
+        <input type="button" value="Kayit" class="btn btn-primary" onclick="musteriKayit()">
+        </div>
+    </form>
+
+</div>
 
 </body>
 </html>
