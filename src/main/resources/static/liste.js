@@ -1,15 +1,7 @@
-function musteriKayit(){
-    const musteri={
-        isim:$("#isim").val(),
-        adres:$("#adres").val()
-    };
-    $.post("/kayit",musteri,function (){
-        hepsiniGetir();
-    });
-    $("#isim").val("");
-    $("#adres").val("");
-}
-
+//en uste bunu ekledik ki "ready" fonksiyonu yani sayfa yuklendi ve calismaya hazir
+$(function (){
+    hepsiniGetir();
+});
 function hepsiniGetir(){
     $.get("/hepsiniGetir",function (data){
         bilgiDuzenle(data);

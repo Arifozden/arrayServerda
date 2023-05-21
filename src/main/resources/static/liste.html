@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Musteri Kayit</title>
+    <title>Title</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <script src="index.js"></script>
+    <script src="liste.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -14,19 +14,16 @@
             <a class="navbar-brand" href="index.html">Musteri Kayit Otomasyonu</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Ana Sayfa</a> </li>
+            <li><a href="index.html">Ana Sayfa</a> </li>
             <li><a href="kayit.html">Kayit</a> </li>
-            <li><a href="liste.html">Liste</a> </li>
+            <li class="active"><a href="liste.html">Liste</a> </li>
         </ul>
     </div>
 </nav>
 <div class="container">
-    <div class="row">
-<h1>Musteri Kayit Otomasyonu</h1>
-<h2>Hosgeldiniz</h2>
-<a href="kayit.html"> <button class="btn btn-primary">Kayit</button></a>
-<a href="liste.html"> <button class="btn btn-primary">Liste</button></a>
-    </div>
+    Tum musteriler:
+    <div id="musteriler" class="table-responsive"></div>
+    <button class="btn btn-danger" onclick="hepsiniSil()">Kayitlari Sil</button>
 </div>
 </body>
 </html>
